@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AR2J — Landing Page</title>
+  <meta name="description" content="AR2J — streetwear Gen Z dengan sistem pre-order. Wear Your Identity." />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-neutral-900">
+  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-gray-200">
+    <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="size-8 rounded-xl bg-black/10 grid place-items-center font-bold">Λ</div>
+        <span class="font-semibold tracking-wide">AR2J</span>
+      </div>
+      <ul class="hidden md:flex items-center gap-8 text-sm text-neutral-600">
+        <li><a href="#features" class="hover:text-black">Fitur</a></li>
+        <li><a href="#pricing" class="hover:text-black">Pricing</a></li>
+        <li><a href="#contact" class="hover:text-black">Kontak</a></li>
+      </ul>
+      <a href="#order" class="inline-flex items-center rounded-2xl px-4 py-2 text-sm font-medium bg-black text-white hover:opacity-90 transition">Pre-Order</a>
+    </nav>
+  </header>
+
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <span class="inline-block text-xs uppercase tracking-widest text-neutral-500">Landing Page Starter</span>
+      <h1 class="mt-3 text-4xl md:text-6xl font-extrabold leading-tight">
+        Bangun web <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-violet-500">cepat & solid</span> tanpa pusing setup.
+      </h1>
+      <p class="mt-4 text-neutral-600 max-w-prose">Langsung taruh di XAMPP, Tailwind via CDN, form tersambung ke database.</p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="#pricing" class="rounded-2xl px-5 py-3 bg-black text-white font-medium hover:opacity-90 transition">Lihat Paket</a>
+        <a href="#features" class="rounded-2xl px-5 py-3 border border-gray-300 hover:border-gray-400 transition">Lihat Fitur</a>
+      </div>
+      <p class="mt-4 text-xs text-neutral-500">Apache + MySQL (XAMPP) • PHP • Tailwind CDN</p>
+    </div>
+    <div class="relative aspect-video rounded-3xl bg-gray-50 border border-gray-200 shadow-2xl"></div>
+  </section>
+
+  <section id="features" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+    <div class="text-center max-w-2xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold">Fitur Utama</h2>
+      <p class="mt-3 text-neutral-600">Landing siap pakai + form ke database + halaman admin ringkas.</p>
+    </div>
+    <div class="mt-10 grid md:grid-cols-3 gap-6">
+      <div class="rounded-2xl border border-gray-200 bg-gray-50 p-6">
+        <div class="size-10 rounded-xl bg-black/10 grid place-items-center mb-4">★</div>
+        <h3 class="font-semibold text-lg">Tanpa Build</h3>
+        <p class="text-neutral-600 mt-1">Tailwind CDN, taruh file langsung di XAMPP.</p>
+      </div>
+      <div class="rounded-2xl border border-gray-200 bg-gray-50 p-6">
+        <div class="size-10 rounded-xl bg-black/10 grid place-items-center mb-4">★</div>
+        <h3 class="font-semibold text-lg">Form Tersambung</h3>
+        <p class="text-neutral-600 mt-1">Leads, subscriber, dan order tersimpan di MySQL.</p>
+      </div>
+      <div class="rounded-2xl border border-gray-200 bg-gray-50 p-6">
+        <div class="size-10 rounded-xl bg-black/10 grid place-items-center mb-4">★</div>
+        <h3 class="font-semibold text-lg">Admin Ringkas</h3>
+        <p class="text-neutral-600 mt-1">Lihat data lewat /admin (Basic Auth).</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="bg-gray-50 border-y border-gray-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold">Pilihan Paket</h2>
+      <p class="mt-3 text-neutral-600">Mulai dari yang sederhana sampai lengkap.</p>
+    </div>
+  </section>
+
+  <section id="newsletter" class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16">
+    <h3 class="text-2xl font-bold text-center">Dapatkan update & diskon</h3>
+    <form action="subscribe.php" method="POST" class="mt-6 grid sm:grid-cols-[1fr_auto] gap-3">
+      <input name="email" type="email" required placeholder="Email kamu"
+             class="w-full rounded-2xl bg-white border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black/10">
+      <button type="submit" class="rounded-2xl px-5 py-3 bg-black text-white font-medium hover:opacity-90 transition">Subscribe</button>
+    </form>
+    <p class="mt-3 text-center text-sm" id="subMsg"></p>
+  </section>
+
+  <section id="order" class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16">
+    <h3 class="text-2xl font-bold text-center">Pre-Order</h3>
+    <form action="order.php" method="POST" class="mt-8 grid grid-cols-1 gap-4">
+      <input name="customer_name" required placeholder="Nama" class="w-full rounded-2xl bg-white border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black/10" />
+      <input name="customer_email" required type="email" placeholder="Email" class="w-full rounded-2xl bg-white border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black/10" />
+      <input name="customer_phone" placeholder="No HP (opsional)" class="w-full rounded-2xl bg-white border border-gray-300 px-4 py-3" />
+      <div class="grid sm:grid-cols-3 gap-3">
+        <select name="product_id" class="rounded-2xl bg-white border border-gray-300 px-4 py-3">
+          <option value="1">AR2J Tee Black — Rp129.000</option>
+          <option value="2">AR2J Tee White — Rp129.000</option>
+        </select>
+        <input name="qty" type="number" min="1" value="1" class="rounded-2xl bg-white border border-gray-300 px-4 py-3" />
+        <button type="submit" class="rounded-2xl px-5 py-3 bg-black text-white font-medium hover:opacity-90 transition">Buat Order</button>
+      </div>
+      <p class="text-xs text-neutral-500">*Produk & harga mengikuti seed pada database.</p>
+    </form>
+  </section>
+
+  <section id="contact" class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16">
+    <h3 class="text-2xl font-bold text-center">Hubungi Kami</h3>
+    <form action="contact.php" method="POST" class="mt-8 grid grid-cols-1 gap-4">
+      <input name="name" required placeholder="Nama" class="w-full rounded-2xl bg-white border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black/10" />
+      <input name="email" required type="email" placeholder="Email" class="w-full rounded-2xl bg-white border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black/10" />
+      <input name="phone" placeholder="No HP (opsional)" class="w-full rounded-2xl bg-white border border-gray-300 px-4 py-3" />
+      <textarea name="message" placeholder="Pesan" rows="4" class="w-full rounded-2xl bg-white border border-gray-300 px-4 py-3"></textarea>
+      <button type="submit" class="rounded-2xl px-5 py-3 bg-black text-white font-medium hover:opacity-90 transition">Kirim</button>
+    </form>
+  </section>
+
+  <footer class="border-t border-gray-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between text-sm text-neutral-500">
+      <p>© <span id="yr"></span> AR2J. All rights reserved.</p>
+      <a href="/ar2j/admin" class="hover:text-black">Admin</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    const p = new URLSearchParams(location.search);
+    const ok = (k) => p.get(k)==='1', fail = (k)=> p.get(k)==='0';
+    const set = (sel, yes, no) => { const el=document.querySelector(sel); if(!el) return;
+      if(yes){ el.textContent=yes; el.className="mt-4 text-sm text-green-700"; }
+      if(no){ el.textContent=no; el.className="mt-4 text-sm text-red-700"; }
+    };
+    set("#newsletter #subMsg", ok('sub') && "Terima kasih! Kamu sudah subscribe.", fail('sub') && "Gagal subscribe.");
+  </script>
+</body>
+</html>
